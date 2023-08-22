@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    max-width: 100vw;
+}
+
+body {
+    background-color: var(--color-fall);
+    width: 100%;
+}
+
+:root {
+    --opacity-main: 0.75;
+    --opacity-hover: 0.45;
+    --opacity-clicked: 1;
+    --color-purple: #7074B3;
+    --color-fall: #f1efe3;
+    --color-button: #1d1f3a;
+    --title-width: 550px;
+    --max-width: calc(100% - 1.5rem);
+    --border-radius: 8px;
+    --item-length-big: 160px;
+    --item-length-small: 100px;
+  }
+
+.title, .gear {
+    background-color: var(--color-purple); 
+    color: aliceblue;
+    align-items: center;
+}
+
+@media (max-width: 320px) {
+    .container {
+        width: 160px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 840px) {
+    .container {
+        width: 290px;
+    }
+}
+
+@media (max-width: 840px) {
+    .title, .gear {
+        width: var(--max-width);
+        border-radius: var(--border-radius);
+        text-align: center;
+        max-width: var(--max-width);
+        margin: 1.5rem auto;
+        padding: 12px;
+    }
+
+    .gear {
+        letter-spacing: .5rem;
+    }
+
+    .container {
+        border-radius: var(--border-radius);
+        padding: 30px;
+        gap: 30px; 
+    }
+
+    .item {
+        width: var(--item-length-small);
+        height: var(--item-length-small);
+        border-radius: var(--border-radius);
+    }
+
+    h1, h3 {
+        font-size: 2rem;
+    }
+    
+    h6 {
+        font-size: 0.7rem;
+    }
+
+    #status {
+        margin: 0.5rem 0;
+        width: 13rem;
+        padding: 0.3rem 0.3rem;
+    }
+
+}
+
+@media (min-width: 840px) {
+    .title, .gear {
+        width: 100vw;
+        border-radius: 0;
+        text-align: center;
+        margin: auto;
+        padding: 68px;
+    }
+
+    .gear {
+        letter-spacing: 1.6rem;
+    }
+
+    .container {
+        width: 410px;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .item {
+        width: var(--item-length-big);
+        height: var(--item-length-big);
+        border-radius: 50%;
+    }
+
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    h1, h3 {
+        font-size: 3.5rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+    }
+
+    #status {
+        width: 20rem;
+        padding: 0.8rem 2rem;
+    }
+
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    /* max-width: var(--max-width); */
+    margin: auto;
+    justify-content: center;
+}
+
+.container.column {
+    padding: 0;
+    flex-direction: column;
+}
+
+.container.row {
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item, #status {
+    cursor: pointer;
+}
+
+.item:hover, #status:hover {
+    opacity: var(--opacity-hover);
+}
+
+/*
+== using native CSS selectors to add the flicker effect ==
+.item:active {
+    opacity: var(--clicked-opacity);
+}
+*/
+
+.red {
+    background-color: #db0909;
+}
+
+.blue {
+    background-color: rgb(0, 183, 255);
+    
+}
+
+.green {
+    background-color: #08c211;
+}
+
+.yellow {
+    background-color: rgb(240, 240, 1);
+}
+
+.opacity-def {
+    opacity: var(--opacity-main);
+}
+
+.opacity-active {
+    /* this is to deactivate the hovering effect while the flicker effect is being played (below) */
+    pointer-events: none;
+    opacity: var(--opacity-clicked);
+}
+
+.border-click {
+    border: rgba(146, 0, 0, 0.548);
+    border-style: solid;
+    border-width: 0.25rem;
+}
+
+/* === TOOLTIP=== */
+
+.tooltip {
+    position: relative;
+    /* display: inline-block; */
+  }
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    top: 0%;
+    left: 0%;
+    font-size: 1rem;
+    visibility: hidden;
+    opacity: 0.7;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    position: absolute;
+    z-index: 1;
+    letter-spacing: normal;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+#status {
+    background-color: var(--color-button);
+    display: inline-block;
+    border-radius: var(--border-radius);
+    opacity: var(--opacity-main);
+    max-width: var(--max-width);
+
+
+	border: none;
+
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+/* class used to disable hovering effects */
+.no-hover{
+    pointer-events: none;
+}
+
+/*
+==== TRASH BIN ====
+
+=== GRID ===
+.container {
+    margin: auto;
+    height: 240px;
+    width: 240px;
+    background-color: white;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    display: grid;
+    border-radius: 15px;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+}
+*/

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Simon Game Version 2.0</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="../../img/icon/robot/favicon-16x16.png" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Scheherazade+New&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="title">
+      <h1>The Simon Game Recreated</h1>
+      <div id="status">
+        <h6 id="status-text">Status Field</h6>
+      </div>
+    </div>
+    <div class="container">
+   
+
+      <!-- cleaned up components for experimenting -->
+          <!-- <div id="red" class="button item red"></div>
+          <div id="blue" class="button item blue"></div>
+          <div id="green" class="button item green"></div>
+          <div id="yellow" class="button item yellow"></div> -->
+
+
+      <div class="container column">
+        <div class="container row">
+          <div id="red" class="button item red"></div>
+          <div id="blue" class="button item blue"></div>
+        </div>
+        <div class="container row">
+          <div id="green" class="button item green"></div>
+          <div id="yellow" class="button item yellow"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <div id="red" class="button item red">1</div>
+      <div id="blue" class="button item blue">2</div>
+      <div id="green" class="button item green">3</div>
+      <div id="yellow" class="button item yellow">4</div>
+    </div> -->
+    <div class="gear tooltip">
+      <h3>♫ ♪ ♪ ♭ ♫ ♪<span class="tooltiptext">I'm just decoration!</span></h3>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
