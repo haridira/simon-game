@@ -1,5 +1,5 @@
 # simon-game
-Solved a challenge to create an responsive Simon game page (adapts well to different screen sizes). Custom design using plain CSS.
+Solved a challenge to create a responsive Simon game page (adapts well to different screen sizes). Custom design using plain CSS.
 
 ## DOM
 Styling tags are altered for display effects.
